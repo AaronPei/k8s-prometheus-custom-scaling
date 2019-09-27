@@ -2,11 +2,10 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: prometheus-demo-app
-  annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    - http:
+    - host: prom-demo.qikqiak.com
+      http:
         paths:
           - path: /
             backend:

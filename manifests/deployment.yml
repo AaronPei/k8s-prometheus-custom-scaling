@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: prometheus-demo-app
-        image: flipstone42/k8s-prometheus-custom-scaling:latest
+        image: cnych/k8s-prometheus-custom-scaling:latest
         resources:
           limits:
             memory: "128Mi"

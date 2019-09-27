@@ -2,6 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: prometheus-demo-app-dashboard
+  namespace: kube-ops
   labels:
     grafana_dashboard: ""
 data:

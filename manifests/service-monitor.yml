@@ -2,6 +2,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: prometheus-demo-app
+  namespace: kube-ops
 spec:
   endpoints:
   - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
@@ -10,3 +11,6 @@ spec:
   selector:
     matchLabels:
       app: prometheus-demo-app
+  namespaceSelector:
+    matchNames:
+    - default
